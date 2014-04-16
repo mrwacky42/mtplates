@@ -1,6 +1,6 @@
 # mtplates
 
-A Clojure library designed to ... well, that part is up to you.
+Make it easy to find out who you've parked behind.
 
 ## Usage
 
