@@ -3,6 +3,8 @@
   :url "http://localhost/mtplates"
   :license {:name "MIT License"
             :url "http://opensource.org/licenses/MIT"}
-  :dependencies [[org.clojure/clojure "1.5.1"]]
+  :dependencies [[org.clojure/clojure "1.5.1"]
+                 [compojure "1.1.6"]
+                 [http-kit "2.1.18"]]
   :main mtplates.core)
 
