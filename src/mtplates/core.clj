@@ -1,12 +1,11 @@
 (ns mtplates.core
   (:gen-class)
-  (:use
-   [compojure.core :only [defroutes GET]]
-   [compojure.handler :only [site]]
-   org.httpkit.server)
-  (:require [compojure.route :as route]
-            [mtplates.reload :as reload]))
-
+  (:require
+   [compojure.core :refer [defroutes GET]]
+   [compojure.handler :refer [site]]
+   [compojure.route :as route]
+   [org.httpkit.server :refer [run-server]]
+   [mtplates.reload :as reload] ))
 
 
 (defn header [str]
@@ -26,4 +25,3 @@
   (if dev
     (reload/start-nstracker))
   (run-server (site #'app-routes) {:port (Integer. port)}))
-
